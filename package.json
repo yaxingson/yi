@@ -1,0 +1,55 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "ni": "./bin/tci.cjs"
+  },
+  "scripts": {
+    "build": "rimraf ./bin && rollup -c -w"
+  },
+  "keywords": [],
+  "author": "sgk",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.7",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^3.2.5",
+    "rollup": "^4.14.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "execa": "^8.0.1",
+    "fast-glob": "^3.3.2",
+    "find-up": "^7.0.0",
+    "fs-extra": "^11.2.0",
+    "fzf": "^0.5.2",
+    "get-port": "^7.1.0",
+    "giget": "^1.2.3",
+    "inquirer": "^9.2.19",
+    "kleur": "^4.1.5",
+    "kolorist": "^1.8.0",
+    "meow": "^13.2.0",
+    "multimatch": "^7.0.0",
+    "node-fetch": "^3.3.2",
+    "ora": "^8.0.1",
+    "rimraf": "^5.0.5",
+    "semver": "^7.6.0",
+    "strip-ansi": "^7.1.0",
+    "tempy": "^3.1.0",
+    "terminal-link": "^3.0.0",
+    "which": "^4.0.0"
+  }
+}
