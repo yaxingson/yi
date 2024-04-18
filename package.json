@@ -5,10 +5,11 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "ni": "./bin/tci.cjs"
+    "ni": "./bin/tci.mjs"
   },
   "scripts": {
-    "build": "rimraf ./bin && rollup -c -w"
+    "build": "rimraf ./bin && rollup -c -w",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "sgk",
@@ -26,6 +27,7 @@
     "prettier": "^3.2.5",
     "rollup": "^4.14.3",
     "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "vitest": "^1.5.0"
   },
