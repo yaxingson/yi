@@ -2,9 +2,9 @@
 
 ## Overview
 
-## Usage
-
 ## Install
+
+## Usage
 
 ## Configure
 
