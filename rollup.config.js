@@ -7,14 +7,18 @@ const config = {
   input:'./cli/index.ts',
   output:[
     {
-      file:'./bin/tci.mjs',
+      file:'./bin/yi.mjs',
+      inlineDynamicImports:true,
       format:'esm'
     }
   ],
   plugins:[
     typescript(),
-    nodeResolve(),
+    nodeResolve({
+      preferBuiltins:false
+    }),
     commonjs()
+    
     
   ]
 }

@@ -1,0 +1,10 @@
+on: push
+
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 
+      uses: actions/checkout@v4
+    - name:
+      run: pnpm test

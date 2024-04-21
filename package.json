@@ -1,37 +1,52 @@
 {
-  "name": "@soetas/tci",
+  "name": "@soetas/yi",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "ni": "./bin/tci.mjs"
+    "yi": "./bin/yi.mjs"
   },
   "scripts": {
+    "preinstall": "echo \"thank you to use!\"",
     "build": "rimraf ./bin && rollup -c -w",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commitizen": "commitizen init cz-conventional-changelog --save --save-exact",
+    "release": "standard-version"
+  },
+  "engines": {
+    "node":"",
+    "npm":""
   },
   "keywords": [],
   "author": "sgk",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.24.4",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.12.7",
+    "@types/semver": "^7.5.8",
+    "commitlint": "^19.2.2",
     "eslint": "^9.0.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
     "rollup": "^4.14.3",
+    "standard-version": "^9.5.0",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
     "vitest": "^1.5.0"
   },
   "dependencies": {
+    "@swc/core": "^1.4.16",
+    "@vue/compiler-sfc": "^3.4.23",
     "commander": "^12.0.0",
     "execa": "^8.0.1",
     "fast-glob": "^3.3.2",
@@ -50,6 +65,7 @@
     "rimraf": "^5.0.5",
     "semver": "^7.6.0",
     "strip-ansi": "^7.1.0",
+    "svelte": "^4.2.15",
     "tempy": "^3.1.0",
     "terminal-link": "^3.0.0",
     "which": "^4.0.0"

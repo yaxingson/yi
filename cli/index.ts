@@ -1,11 +1,12 @@
 #! /usr/bin/env node 
-import { download } from './download'
+import { checkVersion, setCommand } from './init'
 
 async function main() {
-  await download({ username:'sgk-samuel', repo:'template-presets'})
+  await setCommand()
+  
 
 
-
+  
 }
 
 main()
