@@ -11,7 +11,8 @@ async function createAction(projectName:string, options:CreateOptions) {
 }
 
 export default new Command('create')
-  .argument('<name>', 'new project name')
-  .option('-t, --template <name>', '', 'vanilla')
-  .option('-i, --inquirer', '', false)
+  .description('create a new project')
+  .usage('<name> [options]')
+  .argument('<name>', 'project name')
+  .option('-t, --template', 'template', 'vanilla')
   .action(createAction)

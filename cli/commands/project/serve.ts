@@ -9,7 +9,7 @@ import { compileTemplate } from '@vue/compiler-sfc'
 import { CURRENT_PATH } from '../../constant'
 
 
-async function startAction(entry?:string) {
+async function serveAction(entry?:string) {
   const defaultEntries = ['index.html', 'App.vue', 'App.tsx', 'App.svelte']
   entry = entry || defaultEntries.find(item=>existsSync(resolve(CURRENT_PATH, item)))
 
@@ -36,6 +36,10 @@ async function startAction(entry?:string) {
   })
 }
 
-export default new Command('start')
-  .argument('[entry]', 'entry file')
-  .action(startAction)
+export default new Command('serve')
+  .description('run server')
+  .usage('[entry] [options]')
+  .argument('[entry]', 'serve input file')
+  .option('-p, --port', 'server port', '9527')
+  .option('-o, --open', 'auto open browser', false)
+  .action(serveAction)

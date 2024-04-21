@@ -1,10 +1,11 @@
 <script setup lang="ts">
-defineOptions({ name:'<%= componentName %>' })
+
 
 
 </script>
 
 <template>
+
 
 
 </template>

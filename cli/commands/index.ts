@@ -1,9 +1,15 @@
 export { default as installCommand } from './pkg/install'
 export { default as publishCommand } from './pkg/publish'
 export { default as upgradeCommand } from './pkg/upgrade'
+export { default as uninstallCommand } from './pkg/uninstall'
+export { default as unpublishCommand } from './pkg/unpublish'
+export { default as cleanCommand } from './pkg/clean'
 
 export { default as createCommand } from './project/create'
-export { default as startCommand } from './project/start'
-export { default as genCommand } from './project/gen'
-
-
+export { default as serveCommand } from './project/serve'
+export { default as generateCommand } from './project/generate'
+export { default as analysisCommand } from './project/analysis'
+export { default as addCommand } from './project/add'
+export { default as inspectCommand } from './project/inspect'
+export { default as infoCommand } from './project/info'
+export { default as configCommand } from './project/config'

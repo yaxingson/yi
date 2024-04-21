@@ -1,3 +1,3 @@
 import { Command } from 'commander'
 
-export default new Command('unpublish')
+export default new Command('uninstall')

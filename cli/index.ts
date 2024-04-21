@@ -2,10 +2,9 @@
 import { checkVersion, setCommand } from './init'
 
 async function main() {
+  await checkVersion()
   await setCommand()
   
-
-
   
 }
 
