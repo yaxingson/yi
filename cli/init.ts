@@ -21,13 +21,9 @@ export async function setCommand() {
 
   program.name('yi')
     .version(version)
-    .description('yet another command line interface')
+    .description('yet another frontend command line interface')
     .usage('<command> [options]')
-
     
-  program.helpCommand('help', '')
-    .usage('<command> help')
-
   Object.keys(commands).forEach(name=>{
     const command:Command = Reflect.get(commands, name)
     program.addCommand(command)

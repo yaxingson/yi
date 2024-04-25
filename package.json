@@ -2,15 +2,19 @@
   "name": "@soetas/yi",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "type": "module",
-  "bin": {
-    "yi": "./bin/yi.cjs",
-    "test": "echo \"^_^\""
+  "exports": {
+    ".": {
+      "require": "./bin/cli/index.cjs"
+    }
   },
+  "main": "./bin/cli/index.cjs",
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "preinstall": "echo \"thank you to use!\"",
-    "build": "rimraf ./bin && rollup -c -w",
+    "build": "unbuild",
     "prepare": "husky",
     "commitizen": "commitizen init cz-conventional-changelog --save --save-exact",
     "release": "standard-version"
@@ -30,8 +34,10 @@
     "@rollup/plugin-inject": "^5.0.5",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@types/ejs": "^3.1.5",
     "@types/figlet": "^1.5.8",
     "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
     "@types/node": "^20.12.7",
     "@types/semver": "^7.5.8",
     "commitlint": "^19.2.2",
@@ -40,17 +46,18 @@
     "lint-staged": "^15.2.2",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.2.5",
-    "rollup": "^4.14.3",
     "standard-version": "^9.5.0",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
     "vitest": "^1.5.0"
   },
   "dependencies": {
     "@swc/core": "^1.4.16",
     "@vue/compiler-sfc": "^3.4.23",
     "commander": "^12.0.0",
+    "ejs": "^3.1.10",
     "execa": "^8.0.1",
     "fast-glob": "^3.3.2",
     "figlet": "^1.7.0",
