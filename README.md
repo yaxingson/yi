@@ -10,6 +10,7 @@
 - `listr`
 - `inquirier`
 - `oclif`
+- `dedent`
 
 <img src="https://imgos.cn/2024/08/16/66bec1dcefa42.png" width="80%" alt="" />
 
@@ -23,6 +24,9 @@
 ln -s 
 
 node -e "console.log('hello')"
+
+npm link [pkg]
+npm unlink [pkg]
 
 ```
 
